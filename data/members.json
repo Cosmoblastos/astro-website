@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Daniela Valencia Pinales",
+    "description": "Estudiante de Odontología en la UNAM",
+    "image": "/members/daniv.jpeg"
+  },
+  {
+    "name": "Karina Raquel Cortes Marcial",
+    "description": "Estudiante de Odontología en la UNAM",
+    "image": "/members/kary.jpeg"
+  },
+  {
+    "name": "Emilio Maya Jaimes",
+    "description": "Estudiante de Medicina en la UNAM",
+    "image": "/members/emi.jpeg"
+  },
+  {
+    "name": "Sagrario Linares Melo",
+    "description": "Estudiante de Medicina en la BUAP",
+    "image": "/members/sagrario.jpeg"
+  },
+  {
+    "name": "Daniela Guzmán Torres",
+    "description": "Estudiante de Fisioterapia en la UNAM",
+    "image": "/members/danig.jpeg"
+  },
+  {
+    "name": "Alejandro Gómez García",
+    "description": "Estudiante de Informática en la UNAM",
+    "image": "/members/alex.jpeg"
+  },
+  {
+    "name": "Acatzin Salgado Benitez",
+    "description": "Estudiante de Bioingeniería Médica en la UAEMéx",
+    "image": "/members/acatzin.jpeg"
+  },
+  {
+    "name": "Nicolas Cortes Garcia",
+    "description": "Estudiante de Inteligencia computacional y optimización en el IPN",
+    "image": "/members/nico.jpeg"
+  },
+  {
+    "name": "Pedro Alejandro Osorio Zapett",
+    "description": "Estudiante de Ingeniería Mecatrónica en la UNAM",
+    "image": "/members/zapett.jpeg"
+  },
+  {
+    "name": "Halil Kalev Pineda Álvarez",
+    "description": "Estudiante de Innovación Tecnológica en la UNAM",
+    "image": "/members/kalev.jpeg"
+  },
+  {
+    "name": "Fernando Victoriano Anaya",
+    "description": "Estudiante de ingeniería en Telecomunicaciones UNAM",
+    "image": "/members/fer.jpeg"
+  },
+  {
+    "name": "Mario Hazel Almonte Andrade",
+    "description": "Estudiante de Ingeniería electrónica en el ITD",
+    "image": "/members/mario.jpeg"
+  },
+  {
+    "name": "Cynthia Altamirano Manrique",
+    "description": "Estudiante de Medicina en la UNAM",
+    "image": "/members/cyn.jpeg"
+  }
+]
