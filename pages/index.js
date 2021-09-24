@@ -49,7 +49,7 @@ export default function Home() {
 
   return <Box className={classes.root}>
     <Head>
-      <title>Cosmoblastos</title>
+      <title>Cosmoblastos </title>
     </Head>
     <Menu />
     <Hero />
