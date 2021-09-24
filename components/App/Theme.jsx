@@ -28,10 +28,8 @@ const Theme = createTheme({
         },
         MuiButton: {
             contained: {
-                borderRadius: '16px',
             },
             containedPrimary: {
-                borderRadius: '16px',
             }
         },
         MuiCard: {

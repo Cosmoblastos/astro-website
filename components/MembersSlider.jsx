@@ -1,9 +1,12 @@
 import React from 'react';
 import {makeStyles} from "@material-ui/styles";
-import SwiperCore, { Autoplay } from 'swiper';
+import SwiperCore, { Navigation, Autoplay, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Parallax } from 'react-parallax';
 
-SwiperCore.use([Autoplay]);
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/scrollbar';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -17,7 +20,8 @@ const useMemberCardStyles = makeStyles((theme) => ({
         backgroundColor: 'transparent',
         border: `1px solid ${theme.palette.grey[800]}`,
         boxShadow: 0,
-        borderRadius: '4px'
+        borderRadius: '4px',
+        backgroundSize: 'cover',
     },
     content: {
         display: 'grid',
@@ -71,10 +75,12 @@ const useStyles = makeStyles((theme) => ({
 const MembersSlider = () => {
     const classes = useStyles();
     return <Swiper
+        modules={[Navigation, Autoplay, Scrollbar, A11y]}
         autoplay={{ delay: 3000 }}
         className={classes.root}
         spaceBetween={60}
         slidesPerView={4}
+        loop={true}
         breakpoints={{
             320: {
                 slidesPerView: 1,
