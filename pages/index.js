@@ -12,6 +12,7 @@ import Menu from "../components/App/Menu";
 import React from "react";
 import ParticipantsCarrousel from "../components/MembersSlider";
 import Hero from "../components/Hero";
+import Projects from "../components/Projects";
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -39,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     color: 'rgba(255, 255, 255, 0.8)',
     lineHeight: '30px',
     letterSpacing: '.009em',
-  }
+  },
 }));
 
 export default function Home() {
@@ -106,5 +107,6 @@ export default function Home() {
         </Grid>
       </Container>
     </Box>
+    <Projects />
   </Box>
 }

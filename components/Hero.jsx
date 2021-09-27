@@ -6,7 +6,7 @@ import {Button, Grid, Hidden, Typography, useMediaQuery, useTheme} from "@materi
 const useStyles = makeStyles((theme) => ({
     hero: {
         width: '100%',
-        height: '70vh',
+        height: '80vh',
         backgroundImage: 'url(/earth.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center center',

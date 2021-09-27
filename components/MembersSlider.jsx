@@ -2,14 +2,11 @@ import React from 'react';
 import {makeStyles} from "@material-ui/styles";
 import SwiperCore, { Navigation, Autoplay, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Parallax } from 'react-parallax';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 
-// Import Swiper styles
-import 'swiper/css';
 import {Card, CardActionArea, CardContent, Typography} from "@material-ui/core";
 import Box from "@material-ui/core/Box";
 import MembersData from '../data/members.json';
