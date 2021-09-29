@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
-import {makeStyles} from "@material-ui/styles";
+import React, {useCallback, useEffect, useState} from 'react';
+import {makeStyles, useTheme} from "@material-ui/styles";
 import Box from "@material-ui/core/Box";
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import {Container, Grid, Typography} from "@material-ui/core";
+import {Container, Grid, Typography, useMediaQuery} from "@material-ui/core";
 import ProjectsSlider from '../components/ProjectsSlider';
 import {useScrollTrigger} from "./App";
 import clsx from "clsx";
@@ -17,8 +17,6 @@ const Eye = (styles) => {
     }} />
 };
 
-const normalSize = "100px";
-
 const useFaceStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
@@ -28,7 +26,10 @@ const useFaceStyles = makeStyles((theme) => ({
 }));
 
 const Face = () => {
-    const classes = useFaceStyles(),
+    const theme = useTheme(),
+        classes = useFaceStyles(),
+        isMd = useMediaQuery(theme.breakpoints.up('sm')),
+        [normalSize, setNormalSize] = useState("100px"),
         [rightEyeStyles, setRightEyeStyles] = useState({
             width: normalSize,
             height: normalSize
@@ -47,7 +48,7 @@ const Face = () => {
         setRightEyeStyles(p => ({ ...p, ...styles }));
     };
 
-    const normalFace = (restoredStyles = {}) => {
+    const normalFace = useCallback((restoredStyles = {}) => {
         const s = {
             width: normalSize,
             height: normalSize,
@@ -56,7 +57,7 @@ const Face = () => {
         };
         setRightEyeStyles(s);
         setLeftEyeStyles(s);
-    };
+    }, [normalSize]);
 
     useEffect(() => {
         const blinking = setInterval(() => {
@@ -105,15 +106,17 @@ const Face = () => {
             borderTopRightRadius: '50%',
             transform: 'translateY(-20px) rotate(4deg)',
             height: '80px',
+            width: '110px',
         });
-        animateRight({
 
+        animateRight({
             borderRadius: '16px',
             borderBottomRightRadius: '24px',
             borderTopLeftRadius: '50%',
             borderTopRightRadius: '50%',
             transform: 'translateY(-20px) rotate(-4deg)',
             height: '80px',
+            width: '110px',
         });
 
         setTimeout(() => {
@@ -127,8 +130,8 @@ const Face = () => {
     useEffect(() => {
         if (!testExecuted) {
             setTestExecuted(true);
-            //happy();
-            angry();
+            happy();
+            //angry();
         }
     }, [testExecuted]);
 
@@ -150,6 +153,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         width: '100%',
         height: '100vh',
+        overflow: 'hidden',
     },
     title: {
         fontWeight: 'bold',
@@ -166,13 +170,19 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        height: '100vh'
+        height: 'fit-content',
+        padding: theme.spacing(2),
+        [theme.breakpoints.up('md')]: {
+            height: '100vh',
+        }
     }
 }));
 
 const Projects = () => {
     const classes = useStyles(),
-        showTitle = useScrollTrigger(3000);
+        showTitle = useScrollTrigger(3000),
+        theme = useTheme(),
+        isMd = useMediaQuery(theme.breakpoints.up('md'));
 
     return <Box className={classes.root}>
     {/*    <Parallax pages={1}>*/}
@@ -205,7 +215,7 @@ const Projects = () => {
             <Grid container spacing={6}>
                 <Grid item xs={12} md={5}>
                     <Box display={'flex'} alignItems={'center'} justifyContent={'center'} height={'100vh'}>
-                        <Box p={5}>
+                        <Box p={0}>
                             <Typography variant={'h3'} gutterBottom className={classes.title}>
                                 ASTROMX
                             </Typography>
@@ -217,8 +227,8 @@ const Projects = () => {
                 </Grid>
                 <Grid item xs={12} md={7}>
                     <Box className={classes.faceContainer}>
-                        <Box style={{ position: 'absolute', zIndex: 1 }}>
-                            <img src={'/astro-modified.png'} style={{borderRadius: '50%', width: 500, height: 500}} />
+                        <Box style={{ position: 'absolute', zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                            <img src={'/astro-modified.png'} style={{borderRadius: '50%', width: isMd ? '75%' : '90%'}} />
                         </Box>
                         <Box style={{ position: 'absolute', zIndex: 2, marginTop: '-50px' }}>
                             <Face />

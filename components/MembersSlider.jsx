@@ -1,5 +1,5 @@
 import React from 'react';
-import {makeStyles} from "@material-ui/styles";
+import {makeStyles, useTheme} from "@material-ui/styles";
 import SwiperCore, { Navigation, Autoplay, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 
-import {Card, CardActionArea, CardContent, Typography} from "@material-ui/core";
+import {Card, CardActionArea, CardContent, Typography, useMediaQuery} from "@material-ui/core";
 import Box from "@material-ui/core/Box";
 import MembersData from '../data/members.json';
 
@@ -70,14 +70,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const MembersSlider = () => {
-    const classes = useStyles();
+    const classes = useStyles(),
+        theme = useTheme(),
+        isMd = useMediaQuery(theme.breakpoints.up('md'));
+
     return <Swiper
         modules={[Navigation, Autoplay, Scrollbar, A11y]}
         autoplay={{ delay: 3000 }}
         className={classes.root}
         spaceBetween={60}
-        slidesPerView={4}
-        loop={true}
+        slidesPerView={isMd ? 4 : 1}
         breakpoints={{
             320: {
                 slidesPerView: 1,
@@ -97,8 +99,8 @@ const MembersSlider = () => {
         }}
     >
         {
-            MembersData?.length > 0 && MembersData.map((member, index) => (
-                <SwiperSlide key={index}>
+            MembersData?.length > 0 && MembersData.map((member) => (
+                <SwiperSlide key={member.id}>
                     <MemberCard {...member}/>
                 </SwiperSlide>
             ))
