@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {makeStyles} from "@material-ui/styles";
 import Box from "@material-ui/core/Box";
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import {Grid, Typography} from "@material-ui/core";
+import {Container, Grid, Typography} from "@material-ui/core";
 import ProjectsSlider from '../components/ProjectsSlider';
 import {useScrollTrigger} from "./App";
 import clsx from "clsx";
@@ -13,21 +13,17 @@ const Eye = (styles) => {
         background: 'aqua',
         border: 'none',
         borderRadius: '35px',
-        opacity: 0.9,
         ...styles,
     }} />
 };
 
-const normalSize = "120px";
+const normalSize = "100px";
 
 const useFaceStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center',
-        width: '100%',
-        height: '70vh',
-        overflow: 'hidden',
+        justifyContent: 'flex-end',
     }
 }));
 
@@ -72,7 +68,7 @@ const Face = () => {
                 borderTopRightRadius: '35px'
             }), 300);
 
-        }, 5000);
+        }, 4000);
 
         return () => {
             clearInterval(blinking);
@@ -131,26 +127,22 @@ const Face = () => {
     useEffect(() => {
         if (!testExecuted) {
             setTestExecuted(true);
-            happy();
+            //happy();
+            //angry();
         }
     }, [testExecuted]);
 
 
     return <Box className={classes.root}>
-        <Grid container spacing={6} justifyContent={'center'} alignItems={'center'}>
-            <Grid item>
-                <Eye
-                    transition={"all 0.4s"}
-                    {...leftEyeStyles}
-                />
-            </Grid>
-            <Grid item>
-                <Eye
-                    transition={"all 0.4s"}
-                    {...rightEyeStyles}
-                />
-            </Grid>
-        </Grid>
+        <Eye
+            transition={"all 0.4s"}
+            marginRight={'50px'}
+            {...leftEyeStyles}
+        />
+        <Eye
+            transition={"all 0.4s"}
+            {...rightEyeStyles}
+        />
     </Box>
 };
 
@@ -160,20 +152,21 @@ const useStyles = makeStyles((theme) => ({
         height: '100vh',
     },
     title: {
-        textAlign: 'center',
         fontWeight: 'bold',
+        transition: 'opacity 0.5s',
         [theme.breakpoints.down('sm')]: {
             fontSize: '2em',
         },
-        transition: 'opacity 0.5s',
-    },
-    showedTitle: {
-        opacity: 1,
-        transition: 'opacity 0.5s',
     },
     container: {
         height: '60vh',
         padding: theme.spacing(4)
+    },
+    faceContainer: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100vh'
     }
 }));
 
@@ -182,35 +175,58 @@ const Projects = () => {
         showTitle = useScrollTrigger(3000);
 
     return <Box className={classes.root}>
-        <Parallax pages={1}>
-            <ParallaxLayer
-                offset={0}
-                style={{zIndex: 8,  display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-            >
-                <Box ml={1}>
-                    <img src={'/astro-modified.png'} style={{borderRadius: '50%', width: 600, height: 600}}/>
-                </Box>
-            </ParallaxLayer>
-            <ParallaxLayer
-                offset={0.1}
-                style={{zIndex: 8}}
-            >
-                <Face />
-            </ParallaxLayer>
-            <ParallaxLayer
-                offset={0}
-                speed={1}
-                style={{zIndex: 9, display: 'flex', alignItems: 'center', justifyContent: 'flex-start'}}
-            >
-                <Box p={4}>
-                    <Typography variant={'h3'} className={clsx(classes.title, {
-                        [classes.showedTitle]: showTitle
-                    })}>
-                        ASTROMX
-                    </Typography>
-                </Box>
-            </ParallaxLayer>
-        </Parallax>
+    {/*    <Parallax pages={1}>*/}
+    {/*    <ParallaxLayer*/}
+    {/*        offset={0}*/}
+    {/*        style={{zIndex: 8,  display: 'flex', alignItems: 'center', justifyContent: 'center' }}*/}
+    {/*    >*/}
+    {/*        <Box ml={1}>*/}
+    {/*            <img src={'/astro-modified.png'} style={{borderRadius: '50%', width: 500, height: 500}}/>*/}
+    {/*        </Box>*/}
+    {/*    </ParallaxLayer>*/}
+    {/*    <ParallaxLayer*/}
+    {/*        offset={0.1}*/}
+    {/*        style={{zIndex: 8, display: 'flex', justifyContent: 'flex-end'}}*/}
+    {/*    >*/}
+    {/*        <Face />*/}
+    {/*    </ParallaxLayer>*/}
+    {/*    <ParallaxLayer*/}
+    {/*        offset={0}*/}
+    {/*        speed={1}*/}
+    {/*        style={{zIndex: 9, display: 'flex', alignItems: 'center', justifyContent: 'flex-start'}}*/}
+    {/*    >*/}
+    {/*        <Box ml={10} width={'300px'}>*/}
+    {/*           */}
+    {/*        </Box>*/}
+    {/*    </ParallaxLayer>*/}
+    {/*</Parallax>*/}
+
+        <Container>
+            <Grid container spacing={6}>
+                <Grid item xs={12} md={5}>
+                    <Box display={'flex'} alignItems={'center'} justifyContent={'center'} height={'100vh'}>
+                        <Box p={5}>
+                            <Typography variant={'h3'} gutterBottom className={classes.title}>
+                                ASTROMX
+                            </Typography>
+                            <Typography>
+                                Asistente médico personal pensado para fungir tanto en el espacio como en la Tierra. Inspirado en el día a día de un astronauta en la ISS en comparación con nuestra vida durante la pandemia actual, ambos escenarios similares ya que se modifican varios aspectos de la salud; sueño, alimentación, ejercicio, la salud bucal y el estado psicológico. Astro mx se encargará de reestablecer estos parámetros y prevenir futuras modificaciones.
+                            </Typography>
+                        </Box>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} md={7}>
+                    <Box className={classes.faceContainer}>
+                        <Box style={{ position: 'absolute', zIndex: 1 }}>
+                            <img src={'/astro-modified.png'} style={{borderRadius: '50%', width: 500, height: 500}} />
+                        </Box>
+                        <Box style={{ position: 'absolute', zIndex: 2, marginTop: '-50px' }}>
+                            <Face />
+                        </Box>
+                    </Box>
+                </Grid>
+            </Grid>
+        </Container>
     </Box>
 };
 
