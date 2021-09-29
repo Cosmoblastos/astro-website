@@ -128,7 +128,7 @@ const Face = () => {
         if (!testExecuted) {
             setTestExecuted(true);
             //happy();
-            //angry();
+            angry();
         }
     }, [testExecuted]);
 
