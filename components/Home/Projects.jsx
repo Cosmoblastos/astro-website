@@ -2,9 +2,9 @@ import React, {useCallback, useEffect, useState} from 'react';
 import {makeStyles, useTheme} from "@material-ui/styles";
 import Box from "@material-ui/core/Box";
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import {Container, Grid, Typography, useMediaQuery} from "@material-ui/core";
-import ProjectsSlider from '../components/ProjectsSlider';
-import {useScrollTrigger} from "./App";
+import {Button, Container, Grid, Typography, useMediaQuery, Link as MuiLink} from "@material-ui/core";
+import ProjectsSlider from './ProjectsSlider';
+import {useScrollTrigger} from "../App";
 import clsx from "clsx";
 
 const Eye = (styles) => {
@@ -12,7 +12,7 @@ const Eye = (styles) => {
     style={{
         background: 'aqua',
         border: 'none',
-        borderRadius: '35px',
+        //borderRadius: '35px',
         ...styles,
     }} />
 };
@@ -29,14 +29,17 @@ const Face = () => {
     const theme = useTheme(),
         classes = useFaceStyles(),
         isMd = useMediaQuery(theme.breakpoints.up('sm')),
-        [normalSize, setNormalSize] = useState("100px"),
+        [normalSize, setNormalSize] = useState('6.4rem'),
+        [normalBorder, setNormalBorder] = useState('35px'),
         [rightEyeStyles, setRightEyeStyles] = useState({
             width: normalSize,
-            height: normalSize
+            height: normalSize,
+            borderRadius: normalBorder,
         }),
         [leftEyeStyles, setLeftEyeStyles] = useState({
             width: normalSize,
-            height: normalSize
+            height: normalSize,
+            borderRadius: normalBorder,
         }),
         [testExecuted, setTestExecuted] = useState(false);
 
@@ -48,35 +51,23 @@ const Face = () => {
         setRightEyeStyles(p => ({ ...p, ...styles }));
     };
 
+    const animateBoth = (globalStyles, leftStyles = {}, rightStyles = {}) => {
+        animateLeft({ ...leftStyles, ...globalStyles });
+        animateRight({ ...rightStyles, ...globalStyles });
+    };
+
     const normalFace = useCallback((restoredStyles = {}) => {
         const s = {
             width: normalSize,
             height: normalSize,
-            borderRadius: '35px',
+            borderRadius: normalBorder,
             ...restoredStyles
         };
         setRightEyeStyles(s);
         setLeftEyeStyles(s);
-    }, [normalSize]);
+    }, [normalSize, normalBorder]);
 
-    useEffect(() => {
-        const blinking = setInterval(() => {
-            animateLeft({ height: '0px' });
-            animateRight({ height: '0px' });
-
-            setTimeout(() => normalFace({
-                borderTopLeftRadius: '35px',
-                borderTopRightRadius: '35px'
-            }), 300);
-
-        }, 4000);
-
-        return () => {
-            clearInterval(blinking);
-        }
-    }, []);
-
-    const angry = () => {
+    const angry = useCallback(() => {
         animateLeft({
             borderTopLeftRadius: '50%',
             borderTopRightRadius: '80%',
@@ -92,45 +83,55 @@ const Face = () => {
 
         setTimeout(() => {
             normalFace({
-                borderTopLeftRadius: '35px',
-                borderTopRightRadius: '35px'
+                borderTopLeftRadius: normalBorder,
+                borderTopRightRadius: normalBorder
             });
         }, 3000);
-    };
+    }, [normalBorder]);
 
-    const happy = () => {
-        animateLeft({
-            borderRadius: '16px',
-            borderBottomLeftRadius: '24px',
-            borderTopLeftRadius: '50%',
-            borderTopRightRadius: '50%',
-            transform: 'translateY(-20px) rotate(4deg)',
-            height: '80px',
-            width: '110px',
-        });
-
-        animateRight({
-            borderRadius: '16px',
-            borderBottomRightRadius: '24px',
-            borderTopLeftRadius: '50%',
-            borderTopRightRadius: '50%',
-            transform: 'translateY(-20px) rotate(-4deg)',
-            height: '80px',
-            width: '110px',
-        });
+    const happy = useCallback(() => {
+        animateBoth(
+            {
+                borderRadius: '16px',
+                borderBottomLeftRadius: '24px',
+                borderTopLeftRadius: '50%',
+                borderTopRightRadius: '50%',
+                height: '80px',
+                width: '110px',
+            }, 
+            { transform: 'translateY(-20px) rotate(4deg)' }, 
+            { transform: 'translateY(-20px) rotate(-4deg)' }
+        );
 
         setTimeout(() => {
             normalFace({
-                borderTopLeftRadius: '35px',
-                borderTopRightRadius: '35px'
+                borderTopLeftRadius: normalBorder,
+                borderTopRightRadius: normalBorder
             });
         }, 3000);
-    };
+    }, [normalBorder]);
+
+    useEffect(() => {
+        const blinking = setInterval(() => {
+            animateLeft({ height: '0px' });
+            animateRight({ height: '0px' });
+
+            setTimeout(() => normalFace({
+                borderTopLeftRadius: normalBorder,
+                borderTopRightRadius: normalBorder
+            }), 300);
+
+        }, 4000);
+
+        return () => {
+            clearInterval(blinking);
+        }
+    });
 
     useEffect(() => {
         if (!testExecuted) {
             setTestExecuted(true);
-            happy();
+            //happy();
             //angry();
         }
     }, [testExecuted]);
@@ -152,8 +153,13 @@ const Face = () => {
 const useStyles = makeStyles((theme) => ({
     root: {
         width: '100%',
-        height: '100vh',
+        height: '110vh',
         overflow: 'hidden',
+        backgroundColor: '#454545',
+        color: '#fff',
+        [theme.breakpoints.up('md')]: {
+            height: '95vh',
+        }
     },
     title: {
         fontWeight: 'bold',
@@ -170,7 +176,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        height: 'fit-content',
+        height: '45vh',
         padding: theme.spacing(2),
         [theme.breakpoints.up('md')]: {
             height: '100vh',
@@ -212,16 +218,20 @@ const Projects = () => {
     {/*</Parallax>*/}
 
         <Container>
-            <Grid container spacing={6}>
+            <Grid container spacing={isMd ? 6 : 0}>
                 <Grid item xs={12} md={5}>
-                    <Box display={'flex'} alignItems={'center'} justifyContent={'center'} height={'100vh'}>
-                        <Box p={0}>
-                            <Typography variant={'h3'} gutterBottom className={classes.title}>
+                    <Box display={'flex'} alignItems={'center'} justifyContent={'center'} height={ isMd ? '100vh' : '60vh'}>
+                        <Box pb={2}>
+                            <Typography variant={'h3'} gutterBottom className={classes.title} color={'inherit'}>
                                 ASTROMX
                             </Typography>
-                            <Typography>
+                            <Typography color={'inherit'}>
                                 Asistente médico personal pensado para fungir tanto en el espacio como en la Tierra. Inspirado en el día a día de un astronauta en la ISS en comparación con nuestra vida durante la pandemia actual, ambos escenarios similares ya que se modifican varios aspectos de la salud; sueño, alimentación, ejercicio, la salud bucal y el estado psicológico. Astro mx se encargará de reestablecer estos parámetros y prevenir futuras modificaciones.
                             </Typography>
+                            <Box pt={4} />
+                            <MuiLink>
+                                Ver proyecto
+                            </MuiLink>
                         </Box>
                     </Box>
                 </Grid>

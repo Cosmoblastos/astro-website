@@ -9,25 +9,26 @@ import 'swiper/css/scrollbar';
 
 import {Card, CardActionArea, CardContent, Typography, useMediaQuery} from "@material-ui/core";
 import Box from "@material-ui/core/Box";
-import MembersData from '../data/members.json';
+import MembersData from '../../data/members.json';
 
 const useMemberCardStyles = makeStyles((theme) => ({
     root: {
         height: '300px',
         backgroundColor: 'transparent',
-        border: `1px solid ${theme.palette.grey[800]}`,
+        border: `1px solid rgba(255, 255, 255, 0.4)`,
         boxShadow: 0,
-        borderRadius: '4px',
+        borderRadius: '8px',
         backgroundSize: 'cover',
     },
     content: {
         display: 'grid',
-        gridTemplate: '150px 150px / 1fr'
+        gridTemplate: '150px 150px / 1fr',
+        color: '#fff'
     },
     picture: {
         width: '130px',
         height: '130px',
-        borderRadius: '50%'
+        borderRadius: '50%',
     },
     title: {
         fontWeight: 'bold',
@@ -50,11 +51,11 @@ const MemberCard = ({ name, description, image }) => {
                         }}
                     />
                 </Box>
-                <Box>
-                    <Typography variant={'h6'} className={classes.title} gutterBottom>
+                <Box color={'inherit'}>
+                    <Typography variant={'h6'} className={classes.title} gutterBottom color={'inherit'}>
                         {name}
                     </Typography>
-                    <Typography>
+                    <Typography color={'inherit'}>
                         {description}
                     </Typography>
                 </Box>

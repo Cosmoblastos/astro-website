@@ -1,12 +1,12 @@
 import React from 'react';
 import {makeStyles} from "@material-ui/styles";
 import Box from "@material-ui/core/Box";
-import {Button, Grid, Hidden, Typography, useMediaQuery, useTheme} from "@material-ui/core";
+import {Button, Divider, Grid, Hidden, Typography, useMediaQuery, useTheme} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     hero: {
         width: '100%',
-        height: '80vh',
+        height: '85vh',
         backgroundImage: 'url(/earth.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'rgba(0, 0, 0, 0.25)',
+        backgroundColor: 'rgba(0, 0, 0, 0.35)',
     },
     heroInnerBox: {
         width: '40%',
@@ -51,7 +51,7 @@ const Hero = () => {
         isSm = useMediaQuery(theme.breakpoints.down('sm'));
 
     const seeOwrProjectsButton = <Button variant={'outlined'} color={'primary'} disableElevation>
-        Ve nuestros proyectos
+        Ver nuestros proyectos
     </Button>;
 
     return <Box className={classes.hero}>

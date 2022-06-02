@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 'bold'
     },
     active: {
-        backgroundColor: `rgba(0, 0, 0, 0.8)`,
+        backgroundColor: `rgba(0, 0, 0, 0.4)`,
         transition: 'background-color 0.5s',
     }
 }));
@@ -71,7 +71,7 @@ const Menu = () => {
                     <Button variant={'text'} style={{marginRight: 10}}>
                         Contacto
                     </Button>
-                    <Button variant={'outlined'} color={'primary'}>
+                    <Button variant={'contained'} color={'primary'}>
                         donar
                     </Button>
                 </Hidden>
