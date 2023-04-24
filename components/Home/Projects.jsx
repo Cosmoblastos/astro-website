@@ -2,9 +2,21 @@ import React, {useCallback, useEffect, useState} from 'react';
 import {makeStyles, useTheme} from "@material-ui/styles";
 import Box from "@material-ui/core/Box";
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+<<<<<<< Updated upstream:components/Home/Projects.jsx
 import {Button, Container, Grid, Typography, useMediaQuery, Link as MuiLink} from "@material-ui/core";
 import ProjectsSlider from './ProjectsSlider';
 import {useScrollTrigger} from "../App";
+=======
+<<<<<<< Updated upstream:components/Projects.jsx
+import {Container, Grid, Typography} from "@material-ui/core";
+import ProjectsSlider from '../components/ProjectsSlider';
+import {useScrollTrigger} from "./App";
+=======
+import {Button, Container, Grid, Typography, useMediaQuery, Link as MuiLink, Divider} from "@material-ui/core";
+import ProjectsSlider from './ProjectsSlider';
+import {useScrollTrigger} from "../App";
+>>>>>>> Stashed changes:components/Home/Projects.jsx
+>>>>>>> Stashed changes:components/Projects.jsx
 import clsx from "clsx";
 
 const Eye = (styles) => {
@@ -153,6 +165,7 @@ const Face = () => {
 const useStyles = makeStyles((theme) => ({
     root: {
         width: '100%',
+<<<<<<< Updated upstream:components/Home/Projects.jsx
         height: '110vh',
         overflow: 'hidden',
         backgroundColor: '#454545',
@@ -160,6 +173,17 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('md')]: {
             height: '95vh',
         }
+=======
+<<<<<<< Updated upstream:components/Projects.jsx
+        height: '100vh',
+=======
+        height: 'auto',
+        overflow: 'hidden',
+        backgroundColor: '#fff',
+        color: '#222',
+        padding: theme.spacing(6, 0),
+>>>>>>> Stashed changes:components/Home/Projects.jsx
+>>>>>>> Stashed changes:components/Projects.jsx
     },
     title: {
         fontWeight: 'bold',
@@ -216,33 +240,97 @@ const Projects = () => {
     {/*        </Box>*/}
     {/*    </ParallaxLayer>*/}
     {/*</Parallax>*/}
-
         <Container>
+<<<<<<< Updated upstream:components/Home/Projects.jsx
             <Grid container spacing={isMd ? 6 : 0}>
                 <Grid item xs={12} md={5}>
                     <Box display={'flex'} alignItems={'center'} justifyContent={'center'} height={ isMd ? '100vh' : '60vh'}>
                         <Box pb={2}>
                             <Typography variant={'h3'} gutterBottom className={classes.title} color={'inherit'}>
+=======
+<<<<<<< Updated upstream:components/Projects.jsx
+            <Grid container spacing={6}>
+                <Grid item xs={12} md={5}>
+                    <Box display={'flex'} alignItems={'center'} justifyContent={'center'} height={'100vh'}>
+                        <Box p={5}>
+                            <Typography variant={'h3'} gutterBottom className={classes.title}>
+=======
+            <Box width={'100%'} textAlign={'center'} height={'10vh'} display={'flex'} alignItems={'center'} justifyContent={'flex-start'} flexDirection={'column'}>
+                <Typography variant={'h4'} style={{ fontWeight: 'bold' }}>
+                    Nuestros Proyectos
+                </Typography>
+            </Box>
+        </Container>
+        <Container>
+            <Grid container spacing={isMd ? 6 : 0} alignItems={'center'}>
+                <Grid item xs={12} md={5}>
+                    <Box display={'flex'} alignItems={'center'} justifyContent={'center'}>
+                        <Box pb={2}>
+                            <Typography variant={'h3'} gutterBottom className={classes.title} color={'inherit'}>
+>>>>>>> Stashed changes:components/Home/Projects.jsx
+>>>>>>> Stashed changes:components/Projects.jsx
                                 ASTROMX
                             </Typography>
                             <Typography color={'inherit'}>
                                 Asistente médico personal pensado para fungir tanto en el espacio como en la Tierra. Inspirado en el día a día de un astronauta en la ISS en comparación con nuestra vida durante la pandemia actual, ambos escenarios similares ya que se modifican varios aspectos de la salud; sueño, alimentación, ejercicio, la salud bucal y el estado psicológico. Astro mx se encargará de reestablecer estos parámetros y prevenir futuras modificaciones.
                             </Typography>
+<<<<<<< Updated upstream:components/Home/Projects.jsx
                             <Box pt={4} />
                             <MuiLink>
                                 Ver proyecto
                             </MuiLink>
+=======
+<<<<<<< Updated upstream:components/Projects.jsx
+=======
+                            <Box pt={4} />
+                            <Button variant={'contained'} color={'secondary'}>
+                                Ver proyecto
+                            </Button>
+>>>>>>> Stashed changes:components/Home/Projects.jsx
+>>>>>>> Stashed changes:components/Projects.jsx
                         </Box>
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={7}>
+<<<<<<< Updated upstream:components/Projects.jsx
                     <Box className={classes.faceContainer}>
                         <Box style={{ position: 'absolute', zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                             <img src={'/astro-modified.png'} style={{borderRadius: '50%', width: isMd ? '75%' : '90%'}} />
                         </Box>
                         <Box style={{ position: 'absolute', zIndex: 2, marginTop: '-50px' }}>
                             <Face />
+=======
+                    <img src={'/astro-drawing.png'} width={'100%'} />
+                    {/*<Box className={classes.faceContainer}>*/}
+                    {/*    <Box style={{ position: 'absolute', zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>*/}
+                    {/*        <img src={'/astro-modified.png'} style={{borderRadius: '50%', width: isMd ? '75%' : '90%'}} />*/}
+                    {/*    </Box>*/}
+                    {/*    <Box style={{ position: 'absolute', zIndex: 2, marginTop: '-50px' }}>*/}
+                    {/*        <Face />*/}
+                    {/*    </Box>*/}
+                    {/*</Box>*/}
+                </Grid>
+                <Grid item xs={12} />
+                <Grid item xs={12} md={7}>
+                    <Box display={'flex'} alignItems={'center'} justifyContent={'center'}>
+                        <Box pb={2}>
+                            <Typography variant={'h3'} gutterBottom className={classes.title} color={'inherit'}>
+                                Spaceport America Cup Payload
+                            </Typography>
+                            <Typography color={'inherit'}>
+                                Cápsula de conservación de sangre durante vuelos orbitales la cuál mediante la implementación de sistemas de monitoreo, regulación de temperatura y movimiento, energía y control trata de estabilizar los factores externos relativos a la misión con tal de evitar la hemólisis durante el lanzamiento de los cohetes.
+                            </Typography>
+                            <Box pt={4} />
+                            <Button variant={'contained'} color={'secondary'}>
+                                Ver proyecto
+                            </Button>
+>>>>>>> Stashed changes:components/Home/Projects.jsx
                         </Box>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} md={5}>
+                    <Box display={'flex'} alignItems={'center'} justifyContent={'center'}>
+                        <img src={'/payload.jpeg'} width={'300px'} />
                     </Box>
                 </Grid>
             </Grid>

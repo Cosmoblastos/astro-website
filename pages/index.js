@@ -28,8 +28,17 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#274b72',
   },
   whatWeDo: {
+<<<<<<< Updated upstream
     backgroundColor: '#D99F59',
     color: '#222',
+=======
+<<<<<<< Updated upstream
+    backgroundColor: '#274b72'
+=======
+    backgroundColor: '#EAF0FF',
+    color: '#222',
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
   },
   we: {
     width: '100%',
@@ -104,7 +113,7 @@ export default function Home() {
             </Typography>
             <Box pb={4} />
             <Typography variant={'body1'} className={classes.paragraph}>
-              Nos centramos principalmente en el desarrollo de tecnología que apoya en la solución a las principales problemáticas de salud que los astronautas llegan a presentar en su estancia en la Estación Espacial Internacional.
+              Nos centramos en el desarrollo de tecnología que apoya en la solución a las principales problemáticas de salud que los astronautas llegan a presentar en su estancia en la Estación Espacial Internacional.
               También nos dedicamos a la creación y difusión de temas en Medicina Aeroespacial para dar a conocer en la sociedad más sobre ella, para ello participamos en talleres, conferencias, eventos públicos y publicaciones en redes sociales.
             </Typography>
             <Box width={'100%'} display={'flex'} alignItems={'center'} justifyContent={'center'} pt={4}>
@@ -118,13 +127,23 @@ export default function Home() {
               </Button>
             </Box>
           </Grid>
+<<<<<<< Updated upstream
           <Grid item xs={12} md={6}>
             <img src={'/members.jpeg'} width={'100%'} />
           </Grid>
+=======
+<<<<<<< Updated upstream
+=======
+          <Grid item xs={12} md={6}>
+            <img src={'/members_2.jpeg'} width={'100%'} />
+          </Grid>
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
         </Grid>
       </Container>
     </Box>
     <Projects />
+<<<<<<< Updated upstream
     {/* <Box className={clsx(classes.section, classes.contact)}>
       <Container>
         <Grid container spacing={5}>
@@ -146,5 +165,40 @@ export default function Home() {
         </Grid>
       </Container>
     </Box> */}
+=======
+<<<<<<< Updated upstream
+=======
+    {/*<Box className={clsx(classes.section, classes.contact)}>*/}
+    {/*  <Container>*/}
+    {/*    <Grid container spacing={5}>*/}
+    {/*      <Grid item xs={12} md={6}>*/}
+    {/*        <Box width={'100%'} height={'100%'} display={'flex'} alignItems={'center'}>*/}
+    {/*          <img src={'/rocket.png'} width={'70%'} />*/}
+    {/*        </Box>*/}
+    {/*      </Grid>*/}
+    {/*      <Grid item xs={12} md={6}>*/}
+    {/*        <Typography variant={'h5'} className={classes.title}>*/}
+    {/*          Contactanos*/}
+    {/*        </Typography>*/}
+    {/*        <form>*/}
+    {/*          <TextField */}
+    {/*            label={'Nombre'}*/}
+    {/*            variant={'outlined'}*/}
+    {/*            type={'text'}*/}
+    {/*            placeholder={'Ingresa tu nombre completo'}*/}
+    {/*          />*/}
+    {/*          <TextField*/}
+    {/*              label={'Correo electrónico'}*/}
+    {/*              variant={'outlined'}*/}
+    {/*              type={'email'}*/}
+    {/*              placeholder={'Ingresa tu correo electrónico'}*/}
+    {/*          />*/}
+    {/*        </form>*/}
+    {/*      </Grid>*/}
+    {/*    </Grid>*/}
+    {/*  </Container>*/}
+    {/*</Box>*/}
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
   </Box>
 }
