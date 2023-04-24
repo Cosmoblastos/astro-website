@@ -24,16 +24,8 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-<<<<<<< Updated upstream:components/Home/Hero.jsx
-        backgroundColor: 'rgba(0, 0, 0, 0.35)',
-=======
-<<<<<<< Updated upstream:components/Hero.jsx
-        backgroundColor: 'rgba(0, 0, 0, 0.25)',
-=======
         backdropFilter: 'blur(4px)',
         backgroundColor: 'rgba(0, 0, 0, 0.35)',
->>>>>>> Stashed changes:components/Home/Hero.jsx
->>>>>>> Stashed changes:components/Hero.jsx
     },
     heroInnerBox: {
         width: '40%',
@@ -59,17 +51,8 @@ const Hero = () => {
         theme = useTheme(),
         isSm = useMediaQuery(theme.breakpoints.down('sm'));
 
-<<<<<<< Updated upstream:components/Hero.jsx
-    const seeOwrProjectsButton = <Button variant={'outlined'} color={'primary'} disableElevation>
-<<<<<<< Updated upstream:components/Home/Hero.jsx
-        Ver nuestros proyectos
-=======
-        Ve nuestros proyectos
-=======
     const seeOwrProjectsButton = <Button variant={'contained'} color={'primary'} disableElevation>
         Ver nuestros proyectos
->>>>>>> Stashed changes:components/Home/Hero.jsx
->>>>>>> Stashed changes:components/Hero.jsx
     </Button>;
 
     return <Box className={classes.hero}>

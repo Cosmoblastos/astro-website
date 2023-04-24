@@ -28,17 +28,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#274b72',
   },
   whatWeDo: {
-<<<<<<< Updated upstream
-    backgroundColor: '#D99F59',
-    color: '#222',
-=======
-<<<<<<< Updated upstream
-    backgroundColor: '#274b72'
-=======
     backgroundColor: '#EAF0FF',
     color: '#222',
->>>>>>> Stashed changes
->>>>>>> Stashed changes
   },
   we: {
     width: '100%',
@@ -127,47 +118,13 @@ export default function Home() {
               </Button>
             </Box>
           </Grid>
-<<<<<<< Updated upstream
-          <Grid item xs={12} md={6}>
-            <img src={'/members.jpeg'} width={'100%'} />
-          </Grid>
-=======
-<<<<<<< Updated upstream
-=======
           <Grid item xs={12} md={6}>
             <img src={'/members_2.jpeg'} width={'100%'} />
           </Grid>
->>>>>>> Stashed changes
->>>>>>> Stashed changes
         </Grid>
       </Container>
     </Box>
     <Projects />
-<<<<<<< Updated upstream
-    {/* <Box className={clsx(classes.section, classes.contact)}>
-      <Container>
-        <Grid container spacing={5}>
-          <Grid item xs={12} md={6}>
-            <Box width={'100%'} height={'100%'} display={'flex'} alignItems={'center'}>
-              <img src={'/rocket.png'} width={'70%'} />
-            </Box>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Typography variant={'h5'} className={classes.title}>
-              Contactanos
-            </Typography>
-            <form>
-              <TextField 
-                label={'Nombre'}
-              />
-            </form>
-          </Grid>
-        </Grid>
-      </Container>
-    </Box> */}
-=======
-<<<<<<< Updated upstream
-=======
     {/*<Box className={clsx(classes.section, classes.contact)}>*/}
     {/*  <Container>*/}
     {/*    <Grid container spacing={5}>*/}
@@ -198,7 +155,5 @@ export default function Home() {
     {/*    </Grid>*/}
     {/*  </Container>*/}
     {/*</Box>*/}
->>>>>>> Stashed changes
->>>>>>> Stashed changes
   </Box>
 }

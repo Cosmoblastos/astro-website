@@ -1,10 +1,5 @@
 [
   {
-<<<<<<< Updated upstream
-    "id": "9jonwwdml",
-=======
-<<<<<<< Updated upstream
-=======
     "id": "SDFNNOSFD",
     "name": "Alanis Danahe Esquivel Salvador",
     "description": "Estudiante de ingeniería eléctrica electrónica",
@@ -36,8 +31,6 @@
   },
   {
     "id": "9jonwwdml",
->>>>>>> Stashed changes
->>>>>>> Stashed changes
     "name": "Daniela Valencia Pinales",
     "description": "Estudiante de Odontología en la UNAM",
     "image": "/members/daniv.jpeg"
@@ -55,23 +48,7 @@
     "image": "/members/emi.jpeg"
   },
   {
-<<<<<<< Updated upstream
-    "id": "2ejdheh",
-=======
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-    "name": "Sagrario Linares Melo",
-    "description": "Estudiante de Medicina en la BUAP",
-    "image": "/members/sagrario.jpeg"
-  },
-  {
-<<<<<<< Updated upstream
     "id": "9ijfijao",
-=======
-=======
-    "id": "9ijfijao",
->>>>>>> Stashed changes
->>>>>>> Stashed changes
     "name": "Daniela Guzmán Torres",
     "description": "Estudiante de Fisioterapia en la UNAM",
     "image": "/members/danig.jpeg"
@@ -83,29 +60,7 @@
     "image": "/members/alex.jpeg"
   },
   {
-<<<<<<< Updated upstream
-    "id": "ojgirsjf9",
-=======
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-    "name": "Acatzin Salgado Benitez",
-    "description": "Estudiante de Bioingeniería Médica en la UAEMéx",
-    "image": "/members/acatzin.jpeg"
-  },
-  {
-    "id": "9uj0fgsn",
-    "name": "Nicolas Cortes Garcia",
-    "description": "Estudiante de Inteligencia computacional y optimización en el IPN",
-    "image": "/members/nico.jpeg"
-  },
-  {
-<<<<<<< Updated upstream
     "id": "9jfijsdfsd",
-=======
-=======
-    "id": "9jfijsdfsd",
->>>>>>> Stashed changes
->>>>>>> Stashed changes
     "name": "Pedro Alejandro Osorio Zapett",
     "description": "Estudiante de Ingeniería Mecatrónica en la UNAM",
     "image": "/members/zapett.jpeg"
@@ -115,14 +70,5 @@
     "name": "Fernando Victoriano Anaya",
     "description": "Estudiante de ingeniería en Telecomunicaciones UNAM",
     "image": "/members/fer.jpeg"
-<<<<<<< Updated upstream
-  },
-  {
-    "id": "v8h9sdind",
-    "name": "Cynthia Altamirano Manrique",
-    "description": "Estudiante de Medicina en la UNAM",
-    "image": "/members/cyn.jpeg"
-=======
->>>>>>> Stashed changes
   }
 ]
