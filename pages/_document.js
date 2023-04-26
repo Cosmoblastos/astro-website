@@ -34,8 +34,6 @@ class MyDocument extends Document {
                 <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap" rel="stylesheet"/>
                 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
                 <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charSet="UTF-8" />
-                <script src="/donation_script.js">
-                </script>
             </Head>
             <body>
                 <Main/>
