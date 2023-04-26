@@ -140,16 +140,16 @@ export default function Home() {
           </Grid>
           <Grid item xs={12} md={6}>
             <Typography variant={'h5'} className={classes.title}>
-              Contactanos
+              Contáctanos
             </Typography>
             <Box pb={2} />
             <Typography>
-              Correo electrónico:
+              Nuestro correo electrónico es:
             </Typography>
             <a target='_blank' href={'mailto:cosmoblastos.aafi@gmail.com'}>cosmoblastos.aafi@gmail.com</a>
             <Box pb={2} />
             <Typography>
-              Encuentranos en instagram como:
+              Encuentranos en Instagram como:
             </Typography>
               <a target='_blank' href={'https://www.instagram.com/cosmoblastos_aafi/'}>@cosmoblastos_aafi></a>
             <Box pb={2} />
