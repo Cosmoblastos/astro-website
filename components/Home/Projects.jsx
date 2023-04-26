@@ -220,13 +220,14 @@ const Projects = () => {
                     Nuestros Proyectos
                 </Typography>
             </Box>
+            <Box pb={6} />
         </Container>
         <Container>
             <Grid container spacing={isMd ? 6 : 0} alignItems={'center'}>
                 <Grid item xs={12} md={5}>
                     <Box display={'flex'} alignItems={'center'} justifyContent={'center'}>
                         <Box pb={2}>
-                            <Typography variant={'h3'} gutterBottom className={classes.title} color={'inherit'}>
+                            <Typography variant={'h4'} gutterBottom className={classes.title} color={'inherit'}>
                                 ASTROMX
                             </Typography>
                             <Typography color={'inherit'}>
@@ -254,7 +255,7 @@ const Projects = () => {
                 <Grid item xs={12} md={7}>
                     <Box display={'flex'} alignItems={'center'} justifyContent={'center'}>
                         <Box pb={2}>
-                            <Typography variant={'h3'} gutterBottom className={classes.title} color={'inherit'}>
+                            <Typography variant={'h4'} gutterBottom className={classes.title} color={'inherit'}>
                                 Spaceport America Cup Payload
                             </Typography>
                             <Typography color={'inherit'}>
@@ -268,8 +269,46 @@ const Projects = () => {
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={5}>
-                    <Box display={'flex'} alignItems={'center'} justifyContent={'center'}>
-                        <img src={'/payload.jpeg'} width={'300px'} />
+                    <Box p={2}>
+                        <Grid container spacing={1}>
+                            <Grid item xs={6}>
+                                <div
+                                    style={{
+                                        width: '100%',
+                                        height: '368px',
+                                        backgroundImage: 'url(/payload.jpeg)',
+                                        backgroundPosition: 'center',
+                                        backgroundSize: 'cover'
+                                    }}
+                                />
+                            </Grid>
+                            <Grid item xs={6}>
+                                <Grid container spacing={1}>
+                                    <Grid item xs={12}>
+                                        <div
+                                            style={{
+                                                width: '100%',
+                                                height: '180px',
+                                                backgroundImage: 'url(/payload_3.jpeg)',
+                                                backgroundPosition: 'center',
+                                                backgroundSize: 'cover'
+                                            }}
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <div
+                                            style={{
+                                                width: '100%',
+                                                height: '180px',
+                                                backgroundImage: 'url(/payload_2.jpeg)',
+                                                backgroundPosition: 'center',
+                                                backgroundSize: 'cover'
+                                            }}
+                                        />
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Grid>
                     </Box>
                 </Grid>
             </Grid>

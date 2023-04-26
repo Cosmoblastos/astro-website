@@ -32,11 +32,14 @@ class MyDocument extends Document {
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={"true"}/>
                 <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap" rel="stylesheet"/>
-                <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> 
+                <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+                <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charSet="UTF-8" />
+                <script src="/donation_script.js">
+                </script>
             </Head>
             <body>
-            <Main/>
-            <NextScript/>
+                <Main/>
+                <NextScript/>
             </body>
         </Html>
     }

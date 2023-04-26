@@ -14,8 +14,8 @@ import MembersData from '../../data/members.json';
 const useMemberCardStyles = makeStyles((theme) => ({
     root: {
         height: '300px',
-        background: 'rgba(175,162,255,0.1)',
-        border: '2px solid #AFA2FF',
+        background: 'rgba(234, 240, 255, 0.05)',
+        border: '2px solid rgba(234, 240, 255, 0.5)',
         borderRadius: '8px',
         backgroundSize: 'cover',
     },
@@ -28,14 +28,13 @@ const useMemberCardStyles = makeStyles((theme) => ({
         width: '130px',
         height: '130px',
         borderRadius: '50%',
-        border: '4px solid #AFA2FF',
     },
     title: {
         fontWeight: 'bold',
         fontSize: '15px',
     },
     description: {
-        textAlign: 'left'
+        textAlign: 'center',
     }
 }));
 

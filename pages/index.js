@@ -6,13 +6,15 @@ import {
   Typography,
   Grid,
   useTheme,
-  useMediaQuery, Container, Button, TextField,
+  useMediaQuery, Container, Button, TextField, IconButton,
 } from '@material-ui/core'
 import clsx from 'clsx'
 import Menu from "../components/App/Menu"
 import ParticipantsCarrousel from "../components/Home/MembersSlider"
 import Hero from "../components/Home/Hero"
 import Projects from "../components/Home/Projects"
+import InstagramIcon from '@material-ui/icons/Instagram';
+import FacebookIcon from '@material-ui/icons/Facebook';
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -61,7 +63,9 @@ export default function Home() {
       <title>Cosmoblastos</title>
     </Head>
     <Menu />
+    <div id={'home'}/>
     <Hero />
+    <div id={'whoWeAre'}/>
     <Box className={clsx(classes.section, classes.presentation)}>
       <Box pt={2} />
       <Container>
@@ -125,35 +129,65 @@ export default function Home() {
       </Container>
     </Box>
     <Projects />
-    {/*<Box className={clsx(classes.section, classes.contact)}>*/}
-    {/*  <Container>*/}
-    {/*    <Grid container spacing={5}>*/}
-    {/*      <Grid item xs={12} md={6}>*/}
-    {/*        <Box width={'100%'} height={'100%'} display={'flex'} alignItems={'center'}>*/}
-    {/*          <img src={'/rocket.png'} width={'70%'} />*/}
-    {/*        </Box>*/}
-    {/*      </Grid>*/}
-    {/*      <Grid item xs={12} md={6}>*/}
-    {/*        <Typography variant={'h5'} className={classes.title}>*/}
-    {/*          Contactanos*/}
-    {/*        </Typography>*/}
-    {/*        <form>*/}
-    {/*          <TextField */}
-    {/*            label={'Nombre'}*/}
-    {/*            variant={'outlined'}*/}
-    {/*            type={'text'}*/}
-    {/*            placeholder={'Ingresa tu nombre completo'}*/}
-    {/*          />*/}
-    {/*          <TextField*/}
-    {/*              label={'Correo electrónico'}*/}
-    {/*              variant={'outlined'}*/}
-    {/*              type={'email'}*/}
-    {/*              placeholder={'Ingresa tu correo electrónico'}*/}
-    {/*          />*/}
-    {/*        </form>*/}
-    {/*      </Grid>*/}
-    {/*    </Grid>*/}
-    {/*  </Container>*/}
-    {/*</Box>*/}
+    <Box className={clsx(classes.section, classes.contact)}>
+      <div id={'contact'} />
+      <Container>
+        <Grid container spacing={5}>
+          <Grid item xs={12} md={6}>
+            <Box width={'100%'} height={'100%'} display={'flex'} alignItems={'center'}>
+              <img src={'/rocket.png'} width={'70%'} />
+            </Box>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Typography variant={'h5'} className={classes.title}>
+              Contactanos
+            </Typography>
+            <Box pb={2} />
+            <Typography>
+              Correo electrónico:
+            </Typography>
+            <a target='_blank' href={'mailto:cosmoblastos.aafi@gmail.com'}>cosmoblastos.aafi@gmail.com</a>
+            <Box pb={2} />
+            <Typography>
+              Encuentranos en instagram como:
+            </Typography>
+              <a target='_blank' href={'https://www.instagram.com/cosmoblastos_aafi/'}>@cosmoblastos_aafi></a>
+            <Box pb={2} />
+            <Typography>
+              O en Facebook como:
+            </Typography>
+            <a target='_blank' href={'https://www.facebook.com/profile.php?id=100063800955106'}>Cosmoblastos-AAFI></a>
+            <Box pb={2} />
+            <Box display={'flex'}>
+              <IconButton target={'_blank'} href={'https://www.instagram.com/cosmoblastos_aafi/'}>
+                <InstagramIcon />
+              </IconButton>
+              <IconButton target={'_blank'} href={'https://www.facebook.com/profile.php?id=100063800955106'}>
+                <FacebookIcon />
+              </IconButton>
+            </Box>
+          </Grid>
+          {/*<Grid item xs={12} md={6}>*/}
+          {/*  <Typography variant={'h5'} className={classes.title}>*/}
+          {/*    Contactanos*/}
+          {/*  </Typography>*/}
+          {/*  <form>*/}
+          {/*    <TextField*/}
+          {/*      label={'Nombre'}*/}
+          {/*      variant={'outlined'}*/}
+          {/*      type={'text'}*/}
+          {/*      placeholder={'Ingresa tu nombre completo'}*/}
+          {/*    />*/}
+          {/*    <TextField*/}
+          {/*        label={'Correo electrónico'}*/}
+          {/*        variant={'outlined'}*/}
+          {/*        type={'email'}*/}
+          {/*        placeholder={'Ingresa tu correo electrónico'}*/}
+          {/*    />*/}
+          {/*  </form>*/}
+          {/*</Grid>*/}
+        </Grid>
+      </Container>
+    </Box>
   </Box>
 }

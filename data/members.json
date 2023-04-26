@@ -42,18 +42,6 @@
     "image": "/members/kary.jpeg"
   },
   {
-    "id": "9u9fondvn",
-    "name": "Emilio Maya Jaimes",
-    "description": "Estudiante de Medicina en la UNAM",
-    "image": "/members/emi.jpeg"
-  },
-  {
-    "id": "9ijfijao",
-    "name": "Daniela Guzmán Torres",
-    "description": "Estudiante de Fisioterapia en la UNAM",
-    "image": "/members/danig.jpeg"
-  },
-  {
     "id": "9gj012dfg",
     "name": "Alejandro Gómez García",
     "description": "Estudiante de Informática en la UNAM",
@@ -64,6 +52,18 @@
     "name": "Pedro Alejandro Osorio Zapett",
     "description": "Estudiante de Ingeniería Mecatrónica en la UNAM",
     "image": "/members/zapett.jpeg"
+  },
+  {
+    "id": "9u9fondvn",
+    "name": "Emilio Maya Jaimes",
+    "description": "Estudiante de Medicina en la UNAM",
+    "image": "/members/emi.jpeg"
+  },
+  {
+    "id": "9ijfijao",
+    "name": "Daniela Guzmán Torres",
+    "description": "Estudiante de Fisioterapia en la UNAM",
+    "image": "/members/danig.jpeg"
   },
   {
     "id": "9tg4jhrfjs",

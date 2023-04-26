@@ -15,6 +15,7 @@ import MenuMobile from "./MenuMobile";
 import Box from "@material-ui/core/Box";
 import clsx from "clsx";
 import {useScrollTrigger} from "./index";
+import DonateWindow from "./DonateWindow";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -40,9 +41,12 @@ const Menu = () => {
         theme = useTheme(),
         isSm = useMediaQuery(theme.breakpoints.down('sm')),
         [mobileMenuOpen, setMobileMenuOpen] = useState(false),
-        active = useScrollTrigger(600);
+        active = useScrollTrigger(600),
+        [isDonateWindowOpen, setIsDonateWindowOpen] = useState(false),
+        [initialized, setInitialized] = useState(false);
 
     const toggleMenuMobileOpen = () => setMobileMenuOpen(!mobileMenuOpen);
+    const toggleDonateWindowOpen = () => setIsDonateWindowOpen(!isDonateWindowOpen);
 
     return <React.Fragment>
         <AppBar position='fixed' elevation={0} color={'transparent'} classes={{
@@ -62,16 +66,16 @@ const Menu = () => {
                 </Typography>
                 <Box flexGrow={1} />
                 <Hidden smDown>
-                    <Button variant={'text'}>
+                    <Button variant={'text'} href={'/#home'}>
                         Inicio
                     </Button>
-                    <Button variant={'text'}>
+                    <Button variant={'text'} href={'/#whoWeAre'}>
                         Nosotros
                     </Button>
-                    <Button variant={'text'} style={{marginRight: 10}}>
+                    <Button variant={'text'} href={'/#contact'} style={{marginRight: 10}}>
                         Contacto
                     </Button>
-                    <Button variant={'contained'} color={'primary'}>
+                    <Button variant={'contained'} color={'primary'} onClick={toggleDonateWindowOpen}>
                         donar
                     </Button>
                 </Hidden>
@@ -88,7 +92,15 @@ const Menu = () => {
                 }
             </Toolbar>
         </AppBar>
-        <MenuMobile open={mobileMenuOpen} onClose={toggleMenuMobileOpen} />
+        <MenuMobile
+            open={mobileMenuOpen}
+            onClose={toggleMenuMobileOpen}
+            toggleDonateWindowOpen={toggleDonateWindowOpen}
+        />
+        <DonateWindow
+            open={isDonateWindowOpen} onClose={toggleDonateWindowOpen}
+            initialized={initialized} setInitialized={setInitialized}
+        />
     </React.Fragment>
 };
 

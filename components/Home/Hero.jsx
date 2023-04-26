@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        backdropFilter: 'blur(4px)',
+        // backdropFilter: 'blur(4px)',
         backgroundColor: 'rgba(0, 0, 0, 0.35)',
     },
     heroInnerBox: {
