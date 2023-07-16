@@ -6,7 +6,7 @@ import {
   Typography,
   Grid,
   useTheme,
-  useMediaQuery, Container, Button, TextField, IconButton,
+  useMediaQuery, Container, Button, TextField, IconButton, Divider,
 } from '@material-ui/core'
 import clsx from 'clsx'
 import Menu from "../components/App/Menu"
@@ -26,8 +26,8 @@ const useStyles = makeStyles((theme) => ({
     //backgroundImage: 'radial-gradient(83.19% 83.19% at 29.06% 16.81%, #222 0%, rgba(2, 2, 2, 1) 100%)',
     //backgroundImage: 'radial-gradient(83.19% 83.19% at 29.06% 16.81%, #0C476C 0%, #0B3B59 100%)',
     color: '#fff',
-    textAlign: 'center',
     backgroundColor: '#274b72',
+    textAlign: 'center'
   },
   whatWeDo: {
     backgroundColor: '#EAF0FF',
@@ -69,15 +69,15 @@ export default function Home() {
     <Box className={clsx(classes.section, classes.presentation)}>
       <Box pt={2} />
       <Container>
-        <Grid container spacing={5}>
+        <Grid container spacing={4}>
           <Grid item xs={12}>
-            <Grid container spacing={1} justifyContent={'center'}>
+            <Grid container spacing={2} justifyContent={'center'}>
                 <Grid item xs={12}>
                   <Typography variant={'h5'} className={classes.title}>
                     ¿Quiénes somos?
                   </Typography>
-                  <Box pb={2} />
                 </Grid>
+
                 <Grid item xs={12} md={10}>
                   <Typography variant={'body1'} className={classes.paragraph}>
                     Somos la división de Medicina Aeroespacial de la AAFI, un grupo multidisciplinario de estudiantes de diferentes áreas del conocimiento que centra su pasión y talento en las ciencias de la salud, la ingeniería y el espacio para desarrollar tecnología centrada en la Medicina Aeroespacial.
@@ -151,12 +151,12 @@ export default function Home() {
             <Typography>
               Encuentranos en Instagram como:
             </Typography>
-              <a target='_blank' href={'https://www.instagram.com/cosmoblastos_aafi/'}>@cosmoblastos_aafi></a>
+              <a target='_blank' href={'https://www.instagram.com/cosmoblastos_aafi/'}>@cosmoblastos_aafi</a>
             <Box pb={2} />
             <Typography>
               O en Facebook como:
             </Typography>
-            <a target='_blank' href={'https://www.facebook.com/profile.php?id=100063800955106'}>Cosmoblastos-AAFI></a>
+            <a target='_blank' href={'https://www.facebook.com/profile.php?id=100063800955106'}>Cosmoblastos-AAFI</a>
             <Box pb={2} />
             <Box display={'flex'}>
               <IconButton target={'_blank'} href={'https://www.instagram.com/cosmoblastos_aafi/'}>

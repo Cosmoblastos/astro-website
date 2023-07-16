@@ -30,6 +30,8 @@ const Theme = createTheme({
             contained: {
             },
             containedPrimary: {
+                borderRadius: '20px',
+                fontWeight: 'bold',
             }
         },
         MuiCard: {

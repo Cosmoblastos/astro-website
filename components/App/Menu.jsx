@@ -55,10 +55,10 @@ const Menu = () => {
             })
         }}>
             <Toolbar className={classes.container}>
-                <Box pr={2} display={'flex'} alignItems={'center'}>
+                <Box pr={3} display={'flex'} alignItems={'center'}>
                     <img src={'/aafi.png'} alt={'aafi logo'} width={55} height={29}/>
                 </Box>
-                <Box pr={2} display={'flex'} alignItems={'center'}>
+                <Box pr={3} display={'flex'} alignItems={'center'}>
                     <img src={'/logo.png'} alt={'cosmoblastos logo'} width={35} height={35}/>
                 </Box>
                 <Typography variant="h6" className={classes.title}>

@@ -1,22 +1,24 @@
 import React from 'react';
 import {makeStyles} from "@material-ui/styles";
 import Box from "@material-ui/core/Box";
-import {Button, Divider, Grid, Hidden, Typography, useMediaQuery, useTheme} from "@material-ui/core";
+import {Button, Divider, Fade, Grid, Hidden, Typography, useMediaQuery, useTheme} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     hero: {
         width: '100%',
-        height: '85vh',
-        backgroundImage: 'url(/earth.webp)',
+        height: '100vh',
+        backgroundImage: 'url(/mars.png)',
         backgroundSize: 'cover',
-        backgroundPosition: 'center center',
+        backgroundPosition: 'bottom center',
         backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed',
         overflow: 'hidden',
         padding: 0,
         [theme.breakpoints.down('sm')]: {
             height: '80vh'
         },
+        [theme.breakpoints.up('md')]: {
+            backgroundAttachment: 'fixed',
+        }
     },
     heroFlexContainer: {
         width: '100%',
@@ -25,10 +27,10 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         // backdropFilter: 'blur(4px)',
-        backgroundColor: 'rgba(0, 0, 0, 0.35)',
+        backgroundImage: 'radial-gradient(circle, rgba(150,150,150,0.3) 0%, rgba(89,89,89,0.3) 11%, rgba(0,0,0,0.5) 97%)',
     },
     heroInnerBox: {
-        width: '40%',
+        width: '45%',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -40,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
     title: {
         textAlign: 'center',
         fontWeight: 'bold',
+        fontSize: '2.5rem',
         [theme.breakpoints.down('sm')]: {
             fontSize: '2em',
         }
@@ -58,11 +61,15 @@ const Hero = () => {
     return <Box className={classes.hero}>
         <Box className={classes.heroFlexContainer}>
             <Box className={classes.heroInnerBox}>
-                <img src={'/logo.png'} alt={'cosmoblastos logo'} width={isSm ? 170 : 200} height={isSm ? 170 : 200}/>
+                <Fade in timeout={2000}>
+                    <img src={'/logo.png'} alt={'cosmoblastos logo'} width={isSm ? 170 : 200} height={isSm ? 170 : 200}/>
+                </Fade>
                 <Box pb={3} />
-                <Typography variant={'h3'} className={classes.title}>
-                    Creando el futuro de la medicina aeroespacial
-                </Typography>
+                <Fade in timeout={3000}>
+                    <Typography variant={'h3'} className={classes.title}>
+                        Creando el futuro de la medicina aeroespacial
+                    </Typography>
+                </Fade>
                 <Box pb={3} />
                 {
                     isSm
