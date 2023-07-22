@@ -13,8 +13,7 @@ import Menu from "../components/App/Menu"
 import ParticipantsCarrousel from "../components/Home/MembersSlider"
 import Hero from "../components/Home/Hero"
 import Projects from "../components/Home/Projects"
-import InstagramIcon from '@material-ui/icons/Instagram';
-import FacebookIcon from '@material-ui/icons/Facebook';
+import { FacebookIconButton, InstagramIconButton } from '../components/Home/Icons'
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -159,12 +158,8 @@ export default function Home() {
             <a target='_blank' href={'https://www.facebook.com/profile.php?id=100063800955106'}>Cosmoblastos-AAFI</a>
             <Box pb={2} />
             <Box display={'flex'}>
-              <IconButton target={'_blank'} href={'https://www.instagram.com/cosmoblastos_aafi/'}>
-                <InstagramIcon />
-              </IconButton>
-              <IconButton target={'_blank'} href={'https://www.facebook.com/profile.php?id=100063800955106'}>
-                <FacebookIcon />
-              </IconButton>
+              <InstagramIconButton />
+              <FacebookIconButton />
             </Box>
           </Grid>
           {/*<Grid item xs={12} md={6}>*/}

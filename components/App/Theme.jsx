@@ -3,9 +3,19 @@ import { createTheme } from '@material-ui/core';
 const Theme = createTheme({
     typography: {
         fontFamily: [
-            'Montserrat',
+            'Roboto',
             "Lato"
-        ].join(',')
+        ].join(','),
+        h1: {
+            fontFamily: 'Kanit',
+            fontStyle: 'normal',
+        },
+        h3: {
+            fontFamily: 'Kanit',
+            fontWeight: 600,
+            fontSize: '2rem',
+            fontStyle: 'normal'
+        }
     },
     palette: {
         primary: {

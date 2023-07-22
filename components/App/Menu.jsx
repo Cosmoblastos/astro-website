@@ -16,6 +16,7 @@ import Box from "@material-ui/core/Box";
 import clsx from "clsx";
 import {useScrollTrigger} from "./index";
 import DonateWindow from "./DonateWindow";
+import { InstagramIconButton, FacebookIconButton } from '../Home/Icons';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -72,10 +73,14 @@ const Menu = () => {
                     <Button variant={'text'} href={'/#whoWeAre'}>
                         Nosotros
                     </Button>
-                    <Button variant={'text'} href={'/#contact'} style={{marginRight: 10}}>
+                    <Button variant={'text'} href={'/#contact'}>
                         Contacto
                     </Button>
-                    <Button variant={'contained'} color={'primary'} onClick={toggleDonateWindowOpen}>
+                    <Box display={'flex'} style={{marginRight: 10}}>
+                        <InstagramIconButton color={'white'}/>
+                        <FacebookIconButton color={'white'} />
+                    </Box>
+                    <Button variant={'contained'} color={'primary'} onClick={toggleDonateWindowOpen} style={{marginRight: 10}}>
                         donar
                     </Button>
                 </Hidden>
