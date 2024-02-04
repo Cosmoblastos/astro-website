@@ -1,15 +1,51 @@
 [
   {
-    "id": "SDFNNOSFD",
-    "name": "Alanis Danahe Esquivel Salvador",
-    "description": "Estudiante de ingeniería eléctrica electrónica",
-    "image": "/members/alanis.jpg"
+    "id": "DSIFIOSAS",
+    "name": "Lesly Paola Montaño Gomez",
+    "description": "Estudiante de Fisica Biomedica",
+    "image": "/members/pao.jpeg"
   },
   {
-    "id": "IODSFSODAS",
-    "name": "Laura Ilana Moreno",
-    "description": "Estudiante de ingeniería en sistemas biomédicos",
-    "image": "/members/lau.jpg"
+    "id": "DFINAOIND",
+    "name": "Ángel Jaime Ruíz Gómez",
+    "description": "Estudiante de Ingeniería Aeronáutica ",
+    "image": "/members/angel.jpeg"
+  },
+  {
+    "id": "ASDOUSDFF",
+    "name": "Alexandro Contreras Flores",
+    "description": "Estudiante de Ingeniería Biomédica",
+    "image": "/members/alex_2.jpeg"
+  },
+  {
+    "id": "DSIFIOSAS",
+    "name": "César García Flores",
+    "description": "Estudiante de Psicología Ambiental",
+    "image": "/members/cesar.jpeg"
+  },
+  {
+    "id": "DSIFIOSAS",
+    "name": "Isac Valencia Medina",
+    "description": "Estudiante de Ingeniería en Telecomunicaciones",
+    "image": "/members/isac.jpeg"
+  },
+  {
+    "id": "DSIFIOSAS",
+    "name": "Josue Calderón Galván",
+    "description": "Estudiante de Ingeniería en Sistemas Biomédicos",
+    "image": "/members/josue.jpg"
+  },
+  { 
+    "id": "SDOIFODS",
+    "name": "María Fernanda Ramírez Hernández",
+    "description": "Estudiante de Ingeniería en Telecomunicaciones",
+    "image": "/members/mafer.jpeg"
+  },
+  {
+    "id": "DSIFIOSAS",
+    "name": "Adamary Chaparro Mejía",
+    "description": "Estudiante de medicina",
+    "image": "/members/maggy.jpeg"
   },
   {
     "id": "AHSDOUFDOS",
@@ -28,12 +64,6 @@
     "name": "Mario Francisco Arreola",
     "description": "Estudiante de medicina",
     "image": "/members/mario.jpg"
-  },
-  {
-    "id": "GGDFSDAEFRG",
-    "name": "Daniela Valencia Pinales",
-    "description": "Estudiante de Odontología en la UNAM",
-    "image": "/members/daniv.jpeg"
   },
   {
     "id": "jh0sdjamc",
@@ -58,17 +88,5 @@
     "name": "Emilio Maya Jaimes",
     "description": "Estudiante de Medicina en la UNAM",
     "image": "/members/emi.jpeg"
-  },
-  {
-    "id": "SDFDFSDFD",
-    "name": "Daniela Guzmán Torres",
-    "description": "Estudiante de Fisioterapia en la UNAM",
-    "image": "/members/danig.jpeg"
-  },
-  {
-    "id": "9tg4jhrfjs",
-    "name": "Fernando Victoriano Anaya",
-    "description": "Estudiante de ingeniería en Telecomunicaciones UNAM",
-    "image": "/members/fer.jpeg"
   }
 ]

@@ -8,7 +8,7 @@ import { Parallax } from 'react-scroll-parallax';
 const useStyles = makeStyles((theme) => ({
     hero: {
         width: '100%',
-        height: '90vh',
+        height: '100vh',
         backgroundImage: 'url(/mars.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'bottom center',
