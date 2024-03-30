@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     hero: {
         width: '100%',
         height: '100vh',
-        backgroundImage: 'url(/mars.png)',
+        backgroundImage: 'url(/earth.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'bottom center',
         backgroundRepeat: 'no-repeat',
@@ -95,7 +95,7 @@ const Hero = () => {
 
     return <Box className={classes.hero}>
         <Box className={classes.heroFlexContainer}>
-            <Hidden mdDown>
+            {/*<Hidden mdDown>
                 <Fade in timeout={4000}>
                     <Parallax translateX={['300px', '-150px']}>
                         <Box className={classes.astroContainer}>
@@ -103,7 +103,7 @@ const Hero = () => {
                         </Box>
                     </Parallax>
                 </Fade>
-            </Hidden>
+            </Hidden>*/}
             <Parallax>
                 <Box className={classes.heroInnerBox}>
                     <Fade in timeout={2000}>
@@ -127,7 +127,7 @@ const Hero = () => {
                     }
                 </Box>
             </Parallax>
-            <Hidden mdDown>
+            {/*<Hidden mdDown>
                 <Fade in timeout={6000}>
                     <Parallax translateX={['-300px', '150px']}>
                         <Box className={classes.satelliteContainer}>
@@ -135,7 +135,7 @@ const Hero = () => {
                         </Box>
                     </Parallax>
                 </Fade>
-            </Hidden>
+            </Hidden>*/}
         </Box>
     </Box>
 };
