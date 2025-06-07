@@ -84,9 +84,9 @@ export default function Home() {
                 </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={12}>
+          {/* <Grid item xs={12}>
             <ParticipantsCarrousel />
-          </Grid>
+          </Grid> */}
           {/* <Grid item xs={12}>
             <Box alignItems={'center'} justifyContent={'center'} width={'100%'}>
               <Button variant={'outlined'} color={'primary'}>

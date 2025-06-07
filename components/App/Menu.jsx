@@ -80,9 +80,6 @@ const Menu = () => {
                         <InstagramIconButton color={'white'}/>
                         <FacebookIconButton color={'white'} />
                     </Box>
-                    <Button variant={'contained'} color={'primary'} onClick={toggleDonateWindowOpen} style={{marginRight: 10}}>
-                        donar
-                    </Button>
                 </Hidden>
                 {
                     isSm &&
@@ -101,10 +98,6 @@ const Menu = () => {
             open={mobileMenuOpen}
             onClose={toggleMenuMobileOpen}
             toggleDonateWindowOpen={toggleDonateWindowOpen}
-        />
-        <DonateWindow
-            open={isDonateWindowOpen} onClose={toggleDonateWindowOpen}
-            initialized={initialized} setInitialized={setInitialized}
         />
     </React.Fragment>
 };

@@ -60,11 +60,6 @@ const MenuMobile = ({ open, onClose, toggleDonateWindowOpen }) => {
                     ))
                 }
             </List>
-            <Button
-                fullWidth
-                variant={'contained'} color={'primary'} onClick={toggleDonateWindowOpen}>
-                donar
-            </Button>
         </Box>
     </Drawer>;
 };
